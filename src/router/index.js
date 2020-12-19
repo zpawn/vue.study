@@ -10,6 +10,24 @@ const routes = [
     name: 'Home',
     component: Home,
   },
+  {
+    path: '/login',
+    name: 'login',
+    meta: {
+      layout: 'empty',
+    },
+    // eslint-disable-next-line
+    component: () => import('../views/Login.vue'),
+  },
+  {
+    path: '/categories',
+    name: 'categories',
+    meta: {
+      layout: 'main',
+    },
+    // eslint-disable-next-line
+    component: () => import('../views/Categories.vue'),
+  },
 ];
 
 const router = new VueRouter({
