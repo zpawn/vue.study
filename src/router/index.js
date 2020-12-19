@@ -10,7 +10,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Home.vue'),
   },
   {
@@ -19,7 +18,6 @@ const routes = [
     meta: {
       layout: 'empty',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Login.vue'),
   },
   {
@@ -28,7 +26,6 @@ const routes = [
     meta: {
       layout: 'empty',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Register.vue'),
   },
   {
@@ -37,7 +34,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Categories.vue'),
   },
   {
@@ -46,7 +42,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/DetailRecord.vue'),
   },
   {
@@ -55,7 +50,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/History.vue'),
   },
   {
@@ -64,7 +58,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Planning.vue'),
   },
   {
@@ -73,7 +66,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Profile.vue'),
   },
   {
@@ -82,7 +74,6 @@ const routes = [
     meta: {
       layout: 'main',
     },
-    // eslint-disable-next-line
     component: () => import('../views/Record.vue'),
   },
 ];
