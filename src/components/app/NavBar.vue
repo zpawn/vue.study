@@ -5,7 +5,7 @@
         <a href="#" @click.prevent="$emit('click')">
           <i class="material-icons black-text">dehaze</i>
         </a>
-        <span class="black-text">12.12.12</span>
+        <span class="black-text">{{date}}</span>
       </div>
 
       <ProfileMenu/>
@@ -18,6 +18,18 @@ import ProfileMenu from './ProfileMenu.vue';
 
 export default {
   name: 'NavBar',
+  data: () => ({
+    date: new Date(),
+    intervalId: null,
+  }),
+  mounted() {
+    this.intervalId = setInterval(() => {
+      this.date = new Date();
+    }, 1000);
+  },
+  beforeDestroy() {
+    clearInterval(this.intervalId);
+  },
   components: { ProfileMenu },
 };
 </script>

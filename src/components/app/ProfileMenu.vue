@@ -31,11 +31,19 @@
 <script>
 export default {
   name: 'ProfileMenu',
+  data: () => ({
+    profileMenuElm: null,
+  }),
   mounted() {
     // eslint-disable-next-line
-    M.Dropdown.init(this.$refs.profileMenu, {
+    this.profileMenuElm = M.Dropdown.init(this.$refs.profileMenu, {
       constrainWidth: false,
     });
+  },
+  beforeDestroy() {
+    if (this.profileMenuElm && this.profileMenuElm.destroy) {
+      this.profileMenuElm.destroy();
+    }
   },
   methods: {
     logout() {
