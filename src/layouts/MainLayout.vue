@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import isEmpty from 'lodash/isEmpty';
 import NavBar from '../components/app/NavBar.vue';
 import Sidebar from '../components/app/Sidebar.vue';
 
@@ -27,6 +28,13 @@ export default {
   data: () => ({
     isOpen: true,
   }),
+  async mounted() {
+    const userInfo = this.$store.getters.info;
+
+    if (isEmpty(userInfo)) {
+      await this.$store.dispatch('fetchInfo');
+    }
+  },
   components: { NavBar, Sidebar },
 };
 </script>

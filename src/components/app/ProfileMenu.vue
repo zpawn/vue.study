@@ -7,7 +7,7 @@
         data-target="dropdown"
         ref="profileMenu"
       >
-        USER NAME
+        {{name}}
         <i class="material-icons right">arrow_drop_down</i>
       </a>
 
@@ -44,6 +44,11 @@ export default {
     if (this.profileMenuElm && this.profileMenuElm.destroy) {
       this.profileMenuElm.destroy();
     }
+  },
+  computed: {
+    name() {
+      return this.$store.getters.info.name;
+    },
   },
   methods: {
     async logout() {
